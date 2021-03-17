@@ -1,0 +1,9 @@
+<table border="1">
+<tbody>
+<tr><th> Activity Name </th> <th> Location </th> <th> Time </th></tr>
+<tr><td> Lecture </td> <td> Lab 107 </td> <td> 9:00 AM </td> </tr>
+<tr><td> Lab </td> <td> Lab 107 </td> <td> 9:00 AM </td> </tr>
+<tr><td> Project </td> <td> Lab 107 </td> <td> 9:00 AM </td> </tr>
+</tr>
+</tbody>
+</table>

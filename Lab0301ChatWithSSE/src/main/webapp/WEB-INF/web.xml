@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                      https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+  version="5.0"
+  metadata-complete="true">
+
+  <display-name>AWT Lab2</display-name>
+  <description>
+    The 2nd lab for Async Web Technologies Course.
+  </description>
+
+  <request-character-encoding>UTF-8</request-character-encoding>
+
+  <filter>
+    <filter-name>UserInputFilter</filter-name>
+    <filter-class>com.mak.filters.UserInputFilter</filter-class>
+  </filter>
+
+  <filter-mapping>
+    <filter-name>UserInputFilter</filter-name>
+    <url-pattern>/login</url-pattern>
+  </filter-mapping>
+
+  <servlet>
+  	<servlet-name>ChatService</servlet-name>
+  	<servlet-class>com.mak.servlets.ChatServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>ChatService</servlet-name>
+    <url-pattern>/chata</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LoginControllerServlet</servlet-name>
+    <servlet-class>com.mak.servlets.LoginControllerServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>LoginControllerServlet</servlet-name>
+    <url-pattern>/login</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ChatView</servlet-name>
+    <jsp-file>/jsp/chat.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChatView</servlet-name>
+    <url-pattern>/chat</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>ChatServiceServlet</servlet-name>
+    <servlet-class>com.mak.servlets.sse.ChatServiceServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ChatServiceServlet</servlet-name>
+    <url-pattern>/chatService</url-pattern>
+  </servlet-mapping>
+</web-app>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat</title>
+    <link rel="stylesheet" href="/AsyncL3/bootstrap-5.0.0-beta2-dist/css/bootstrap.min.css">
+</head>
+<body>
+<main class="container-fluid my-3">
+    <div class="row justify-content-sm-center">
+        <div class="col-sm-6">
+            <section class="card mb-sm-3 shadow border-primary">
+                <h2 class="card-header text-center text-uppercase bg-primary text-white">login</h2>
+                <section class="row card-body g-sm-3 align-items-sm-end">
+                    <div class="col-sm-6">
+                        <img class="mw-100" src="/AsyncL3/images/conv.png" alt="chat logo">
+                    </div>
+                    <form class="col-sm-6 align-self-sm-center d-flex flex-column gap-2" action="html/chat.html" METHOD="GET">
+                        <div class="col-sm-12">
+                            <label for="userName" class="form-label">Username</label>
+                            <input type="text" id="userName" class="form-control" name="userName"
+                                   placeholder="Enter your username" onblur="checkUsername()" required>
+                            <p class="valid-feedback">Looks Great &#128516;</p>
+                            <p id="invalidUserName" class="invalid-feedback">Username is not correct.
+                                &#128580;</p>
+                        </div>
+                        <div class="col-sm-12">
+                            <div class="d-flex gap-2 justify-content-center py-1">
+                                <div class="form-check">
+                                    <input type="radio" id="maleOption" name="gender" class="form-check-input" value="male" checked>
+                                    <label class="form-check-label" for="maleOption">Male</label>
+                                </div>
+                                <div class="form-check">
+                                    <input type="radio" id="femaleOption" name="gender" value="female" class="form-check-input">
+                                    <label class="form-check-label" for="femaleOption">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-12 d-flex justify-content-sm-center">
+                            <input type="submit" class="col-sm-12 btn btn-primary w-50" value="Let's Start">
+                        </div>
+                    </form>
+                </section>
+            </section>
+        </div>
+    </div>
+</main>
+<script src="/AsyncL3/bootstrap-5.0.0-beta2-dist/js/jquery-3.5.1.min.js"></script>
+<script src="/AsyncL3/bootstrap-5.0.0-beta2-dist/js/bootstrap.min.js"></script>
+<script src="/AsyncL3/js/Validation.js"></script>
+<script src="/AsyncL3/js/home.js"></script>
+</body>
+</html>
